@@ -2,7 +2,7 @@ backend:
   name: github
   repo: marcelocho/orita-teste
   branch: main
-  base_url: https://orita-teste.vercel.app/
+  base_url: https://orita-teste.vercel.app
   auth_endpoint: /api/auth
 media_folder: "public/img/blog"
 public_folder: "/img/blog"
