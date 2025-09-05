@@ -6,6 +6,8 @@ backend:
   auth_endpoint: /api/auth
 media_folder: "public/img/blog"
 public_folder: "/img/blog"
+media_library:
+  name: git
 collections:
   - name: "seminar"
     label: "Lunch Seminar"
