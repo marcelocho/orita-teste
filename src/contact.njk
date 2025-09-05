@@ -1,0 +1,138 @@
+---
+title: Studio Orita
+layout: "base.njk"
+cssPath: "/css/pages.css"
+---
+<section class="header2">
+  <nav class="nav3" id="navAbout">
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <a href="/">
+        <img class="only-mobile" src="../img/logo-header.png" alt="">
+      </a>      
+      <li> 
+        <a href="/">
+          <h3>Home</h3>
+          <p>ホーム</p>
+        </a>
+      </li>
+      <li>
+        <a href="/gallery">
+          <h3>Gallery</h3>
+          <p>ギャラリー</p>
+        </a>
+      </li>
+      <li>
+        <a href="/works">
+          <h3>Selected Works</h3>
+          <p>作品集</p>
+        </a>
+      </li>
+      <li>
+        <a href="/about">
+          <h3>About</h3>
+          <p>私について</p>
+        </a>
+      </li>
+      <li>
+        <a href="/price">
+          <h3>Price</h3>
+          <p>撮影プラン</p>
+        </a>
+      </li>
+      <li>
+        <a class="selected">
+          <h3>Contact</h3>
+          <p>お問い合わせ</p>
+        </a>
+      </li>
+      <div class="icons only-mobile">
+        <a href="https://www.instagram.com/felipeorita/">
+          <img src="../img/svg/instagram.svg" alt="">
+        </a>
+        <a href="https://line.me/R/oaMessage/@607mlzul/?Hi%2C%20I%20came%20from%20the%20site%20and%20need%20more%20information.%0A%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%A6%E3%80%82%E3%81%93%E3%81%A1%E3%82%89%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%A9%B3%E3%81%97%E3%81%8F%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84%E3%81%A7%E3%81%99%E3%80%82">
+          <img src="../img/svg/line.svg" alt="">
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=818094043450&text=Hi%2C%20I%20came%20from%20the%20site%20and%20need%20more%20information.%0A%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%A6%E3%80%82%E3%81%93%E3%81%A1%E3%82%89%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%A9%B3%E3%81%97%E3%81%8F%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84%E3%81%A7%E3%81%99%E3%80%82">
+          <img src="../img/svg/whatsapp.svg" alt="">
+        </a>
+      </div>
+      <label class="menu-icon-inside only-mobile" for="menu-btn">
+        <span class="navicon"></span
+      ></label>
+    </ul>
+  </nav>
+ 
+</section>
+
+<section class="contact">
+  <div class="contact-wrapper">
+    <div class="left-contact">
+      <h3>連絡</h3>
+      <h2>Get in Touch</h2>
+      <p>一緒に、永遠に残る思い出を作りましょう。あなたからのご連絡を楽しみにしています。」</p>
+      <p> Let's create timeless memories together.
+          <br/>I'd love to hear from you.</p>
+    </div>
+
+    <div class="right-form">
+      <form 
+      action="https://formsubmit.co/felipeorita@gmail.com" 
+      method="POST"
+      >
+        <label for="name">Full name</label>
+        <input placeholder="Full name" type="text" name="name" id="name" required>
+        <label for="email">Email adress</label>
+        <input placeholder="Email" type="email" name="email" id="email" required>
+        <label for="contact">Contact number</label>
+        <input placeholder="Phone number" type="tel" name="contact" id="contact">
+        <div class="wrap-date">
+          <div class="first-choice">
+            <label for="dateOne">Desired date 1</label>
+            <input type="date" name="dateOne" id="dateOne" required>
+          </div>
+          <div class="second-choice">
+            <label for="dateTwo">Desired date 2</label>
+            <input type="date" name="dateTwo" id="dateTwo">
+          </div>
+
+        </div>
+        <label for="subject">Subject</label>
+        <input placeholder="Subject" type="text" name="subject" id="subject" required>
+        <label for="message">Message</label>
+        <textarea placeholder="Write your message here" name="message" id="message" rows="5" required></textarea>
+     <button class="blackButton" type="submit">Send</button>
+</form>
+    </div>
+
+  </div>
+
+</section>
+
+
+{% include 'footer.njk' %}
+
+ <!-- script para o menu que abre do mobile -->
+<script>
+    const checkbox = document.querySelector('.menu-btn');
+    const menu = document.querySelector('.menu');
+  
+  checkbox.addEventListener('change', () => {
+    if (checkbox.checked) {
+      // Abrir o menu suavemente
+      menu.classList.add('open');
+      const fullHeight = window.innerHeight + 'px';
+      menu.style.maxHeight = fullHeight;
+    } else {
+      // Fechar o menu suavemente
+      menu.style.maxHeight = menu.scrollHeight + 'px';
+      requestAnimationFrame(() => {
+        menu.style.maxHeight = '0';
+      });
+      menu.addEventListener('transitionend', () => {
+        menu.classList.remove('open');
+      }, { once: true });
+    }
+  });
+  </script>

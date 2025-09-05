@@ -1,0 +1,556 @@
+---
+title: Studio Orita
+layout: "base.njk"
+cssPath: "/css/pages.css"
+---
+<section class="header2">
+  <nav class="nav3" id="navAbout">
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <a href="/">
+        <img class="only-mobile" src="../img/logo-header.png" alt="">
+      </a>      
+      <li> 
+        <a href="/">
+          <h3>Home</h3>
+          <p>ホーム</p>
+        </a>
+      </li>
+      <li>
+        <a href="/gallery">
+          <h3>Gallery</h3>
+          <p>ギャラリー</p>
+        </a>
+      </li>
+      <li>
+        <a href="/works">
+          <h3>Selected Works</h3>
+          <p>作品集</p>
+        </a>
+      </li>
+      <li>
+        <a href="/about">
+          <h3>About</h3>
+          <p>私について</p>
+        </a>
+      </li>
+      <li>
+        <a class="selected">
+          <h3>Price</h3>
+          <p>撮影プラン</p>
+        </a>
+      </li>
+      <li>
+        <a href="/contact">
+          <h3>Contact</h3>
+          <p>お問い合わせ</p>
+        </a>
+      </li>
+      <div class="icons only-mobile">
+        <a href="https://www.instagram.com/felipeorita/">
+          <img src="../img/svg/instagram.svg" alt="">
+        </a>
+        <a href="https://line.me/R/oaMessage/@607mlzul/?Hi%2C%20I%20came%20from%20the%20site%20and%20need%20more%20information.%0A%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%A6%E3%80%82%E3%81%93%E3%81%A1%E3%82%89%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%A9%B3%E3%81%97%E3%81%8F%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84%E3%81%A7%E3%81%99%E3%80%82">
+          <img src="../img/svg/line.svg" alt="">
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=818094043450&text=Hi%2C%20I%20came%20from%20the%20site%20and%20need%20more%20information.%0A%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%A6%E3%80%82%E3%81%93%E3%81%A1%E3%82%89%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%A9%B3%E3%81%97%E3%81%8F%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84%E3%81%A7%E3%81%99%E3%80%82">
+          <img src="../img/svg/whatsapp.svg" alt="">
+        </a>
+
+      </div>
+      <label class="menu-icon-inside only-mobile" for="menu-btn">
+        <span class="navicon"></span
+      ></label>
+    </ul>
+  </nav>
+ 
+</section>
+
+<section class="price">
+  <h3>思い出への投資：撮影プラン</h3>
+  <h2>Investment in Memories: Our Photography Plans.</h2>
+
+  <div class="price-wrap">
+    <img src="../img/price/kids.svg" alt="">
+    <h4>キッズ</h4>
+    <div class="itens">
+      <div class="item">
+        <div class="opener" onclick="toggleInfo('kidsMoment')">
+          <img class="toggle-button" src="../img/svg/open.svg" alt="arrow to open info">
+          <h5>Moment Plan</h5>
+        </div>
+        <div class="more-info" id="kidsMoment">
+          <p>
+            Kids' Photoshoot: 15 photos delivered on a flash drive.
+          </p>
+          <p>
+            <strong>
+              ¥ 37,500 tax included.
+            </strong>
+          </p>
+          <p>
+            キッズ撮影プラン： 15枚のデータ（USBメモリにて納品） 
+          </p>
+          <p>
+            <strong>
+              ¥ 37,500 （税込）
+            </strong>
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="opener" onclick="toggleInfo('kidsDream')">
+          <img class="toggle-button" src="../img/svg/open.svg" alt="arrow to open info">
+          <h5>Dream Plan</h5>
+        </div>
+        <div class="more-info" id="kidsDream">
+            <p>
+              Kids' Photoshoot: 20 photos.
+              <br/><br/>
+              Delivery Method: Linen album with 20 personalized pages, 20cm x 20cm in size, including a linen box and a personalized flash drive.            
+            </p>
+            <p>
+              <strong>
+                ¥ 83,500 tax included.
+              </strong>
+            </p>
+            <p>
+              キッズ撮影プラン： 20枚のデータ
+              <br/><br/>
+              納品内容： 20ページ、20cm x 20cmの麻製アルバム（パーソナライズされたページ付き）、麻製ボックス、パーソナライズされたUSBメモリが含まれます。 
+            </p>
+            <p>
+              <strong>
+                ¥ 83,500 （税込）
+              </strong>
+            </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="opener" onclick="toggleInfo('kidsEternalize')">
+          <img class="toggle-button" src="../img/svg/open.svg" alt="arrow to open info">
+          <h5>Eternalize Plan</h5>
+        </div>
+          <div class="more-info" id="kidsEternalize">
+            <p>
+              Kids' Photoshoot: 25 photos.
+              <br/><br/>
+              Delivery Method:Linen album with 25 personalized pages, 25cm x 25cm in size, including a linen box and a personalized flash drive. Wall art in Canva, 40x60cm.            
+            </p>
+            <p>
+              <strong>
+                ¥ 112,500 tax included.
+              </strong>
+            </p>
+            <p>
+              キッズ撮影プラン： 25枚のデータ              
+              <br/><br/>
+              納品内容： 25ページ、25cm x 25cmの麻製アルバム（パーソナライズされたページ付き）、麻製ボックス、パーソナライズされたUSBメモリが含まれます。 Canva製ウォールアート 40cm x 60cm。             </p>
+            <p>
+              <strong>
+                ¥ 112,500 （税込）
+              </strong>
+            </p>
+          </div>
+      </div>
+      <a class="blackButton" href="https://line.me/R/oaMessage/@607mlzul/?Hi%2C%20I%20came%20from%20the%20site%20and%20need%20more%20information.%0A%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%A6%E3%80%82%E3%81%93%E3%81%A1%E3%82%89%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%A9%B3%E3%81%97%E3%81%8F%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84%E3%81%A7%E3%81%99%E3%80%82">Get in Touch</a>
+    </div>
+  </div>
+  <div class="price-wrap back3">
+    <img class="maternity" src="../img/price/maternity.svg" alt="">
+    <h4>マタニティ</h4>
+    <div class="itens">
+      <div class="item">
+        <div class="opener" onclick="toggleInfo('maternityMoment')">
+          <img class="toggle-button" src="../img/svg/open.svg" alt="arrow to open info">
+          <h5>Moment Plan</h5>
+        </div>
+        <div class="more-info" id="maternityMoment">
+          <p>
+            Maternity Photoshoot: 15 photos delivered on a flash drive.
+          </p>
+          <p>
+            <strong>
+              ¥ 37,500 tax included.
+            </strong>
+          </p>
+          <p>
+            マタニティ撮影プラン： 15枚のデータ（USBメモリにて納品） 
+          </p>
+          <p>
+            <strong>
+              ¥ 37,500 （税込）
+            </strong>
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="opener" onclick="toggleInfo('maternityDream')">
+          <img class="toggle-button" src="../img/svg/open.svg" alt="arrow to open info">
+          <h5>Dream Plan</h5>
+        </div>
+        <div class="more-info" id="maternityDream">
+            <p>
+              Maternity Photoshoot: 20 photos.
+              <br/><br/>
+              Delivery Method: Linen album with 20 personalized pages, 20cm x 20cm in size, including a linen box and a personalized flash drive.            
+            </p>
+            <p>
+              <strong>
+                ¥ 83,500 tax included.
+              </strong>
+            </p>
+            <p>
+              マタニティ撮影プラン： 20枚のデータ
+              <br/><br/>
+              納品内容： 20ページ、20cm x 20cmの麻製アルバム（パーソナライズされたページ付き）、麻製ボックス、パーソナライズされたUSBメモリが含まれます。 
+            </p>
+            <p>
+              <strong>
+                ¥ 83,500 （税込）
+              </strong>
+            </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="opener" onclick="toggleInfo('maternityEternalize')">
+          <img class="toggle-button" src="../img/svg/open.svg" alt="arrow to open info">
+          <h5>Sweet Anticipation Plan</h5>
+        </div>
+          <div class="more-info" id="maternityEternalize">
+            <p>
+              Maternity Photoshoot: 25 photos.              
+              <br/><br/>
+              Delivery Method:Linen album with 25 personalized pages, 25cm x 25cm in size, including a linen box and a personalized flash drive. Wall art in Canva, 40x60cm.            
+            </p>
+            <p>
+              <strong>
+                ¥ 112,500 tax included.
+              </strong>
+            </p>
+            <p>
+              マタニティ撮影プラン： 20枚のデータ              
+              <br/><br/>
+              納品内容： 25ページ、25cm x 25cmの麻製アルバム（パーソナライズされたページ付き）、麻製ボックス、パーソナライズされたUSBメモリが含まれます。 Canva製ウォールアート 40cm x 60cm。             </p>
+            <p>
+              <strong>
+                ¥ 112,500 （税込）
+              </strong>
+            </p>
+          </div>
+      </div>
+      <a class="blackButton" href="https://line.me/R/oaMessage/@607mlzul/?Hi%2C%20I%20came%20from%20the%20site%20and%20need%20more%20information.%0A%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%A6%E3%80%82%E3%81%93%E3%81%A1%E3%82%89%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%A9%B3%E3%81%97%E3%81%8F%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84%E3%81%A7%E3%81%99%E3%80%82">Get in Touch</a>
+    </div>
+  </div>
+  <div class="price-wrap">
+    <img class="family" src="../img/price/family.svg" alt="">
+    <h4>家族</h4>
+    <div class="itens">
+      <div class="item">
+        <div class="opener" onclick="toggleInfo('familyMoment')">
+          <img class="toggle-button" src="../img/svg/open.svg" alt="arrow to open info">
+          <h5>Moment Plan</h5>
+        </div>
+        <div class="more-info" id="familyMoment">
+          <p>
+            Family Photoshoot: 15 photos delivered on a flash drive.
+          </p>
+          <p>
+            <strong>
+              ¥ 47,500 tax included.
+            </strong>
+          </p>
+          <p>
+            家族撮影プラン： 15枚のデータ（USBメモリにて納品）  
+          </p>
+          <p>
+            <strong>
+              ¥ 47,500 （税込）
+            </strong>
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="opener" onclick="toggleInfo('familyDream')">
+          <img class="toggle-button" src="../img/svg/open.svg" alt="arrow to open info">
+          <h5>Dream Plan</h5>
+        </div>
+        <div class="more-info" id="familyDream">
+            <p>
+              Family Photoshoot: 20 photos.
+              <br/><br/>
+              Delivery Method: Linen album with 20 personalized pages, 20cm x 20cm in size, including a linen box and a personalized flash drive.            
+            </p>
+            <p>
+              <strong>
+                ¥ 83,500 tax included.
+              </strong>
+            </p>
+            <p>
+              家族撮影プラン： 20枚のデータ              
+              <br/><br/>
+              納品内容： 20ページ、20cm x 20cmの麻製アルバム（パーソナライズされたページ付き）、麻製ボックス、パーソナライズされたUSBメモリが含まれます。 
+            </p>
+            <p>
+              <strong>
+                ¥ 83,500 （税込）
+              </strong>
+            </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="opener" onclick="toggleInfo('familyEternalize')">
+          <img class="toggle-button" src="../img/svg/open.svg" alt="arrow to open info">
+          <h5>Family Tales Plan</h5>
+        </div>
+          <div class="more-info" id="familyEternalize">
+            <p>
+              Family Photoshoot: 25 photos.
+              <br/><br/>
+              Delivery Method:Linen album with 25 personalized pages, 25cm x 25cm in size, including a linen box and a personalized flash drive. Wall art in Canva, 40x60cm.            
+            </p>
+            <p>
+              <strong>
+                ¥ 112,500 tax included.
+              </strong>
+            </p>
+            <p>
+              家族撮影プラン： 25枚のデータ              
+              <br/><br/>
+              納品内容： 25ページ、25cm x 25cmの麻製アルバム（パーソナライズされたページ付き）、麻製ボックス、パーソナライズされたUSBメモリが含まれます。 Canva製ウォールアート 40cm x 60cm。             </p>
+            <p>
+              <strong>
+                ¥ 112,500 （税込）
+              </strong>
+            </p>
+          </div>
+      </div>
+      <a class="blackButton" href="https://line.me/R/oaMessage/@607mlzul/?Hi%2C%20I%20came%20from%20the%20site%20and%20need%20more%20information.%0A%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%A6%E3%80%82%E3%81%93%E3%81%A1%E3%82%89%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%A9%B3%E3%81%97%E3%81%8F%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84%E3%81%A7%E3%81%99%E3%80%82">Get in Touch</a>
+    </div>
+  </div>
+  <div class="price-wrap back3">
+    <img class="birthday" src="../img/price/birthday.svg" alt="">
+    <h4>誕生日</h4>
+    <div class="itens">
+      <div class="item">
+        <div class="opener" onclick="toggleInfo('birthdayMoment')">
+          <img class="toggle-button" src="../img/svg/open.svg" alt="arrow to open info">
+          <h5>Moment Plan</h5>
+        </div>
+        <div class="more-info" id="birthdayMoment">
+          <p>
+            Birthday Photoshoot: 15 photos delivered on a flash drive.
+          </p>
+          <p>
+            <strong>
+              ¥ 37,500 tax included.
+            </strong>
+          </p>
+          <p>
+            バースデー撮影プラン： 15枚のデータ（USBメモリにて納品） 
+          </p>
+          <p>
+            <strong>
+              ¥ 37,500 （税込）
+            </strong>
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="opener" onclick="toggleInfo('birthdayDream')">
+          <img class="toggle-button" src="../img/svg/open.svg" alt="arrow to open info">
+          <h5>Dream Plan</h5>
+        </div>
+        <div class="more-info" id="birthdayDream">
+            <p>
+              Birthday Photoshoot: 20 photos.
+              <br/><br/>
+              Delivery Method: Linen album with 20 personalized pages, 20cm x 20cm in size, including a linen box and a personalized flash drive.            
+            </p>
+            <p>
+              <strong>
+                ¥ 83,500 tax included.
+              </strong>
+            </p>
+            <p>
+              バースデー撮影プラン： 20枚のデータ
+              <br/><br/>
+              納品内容： 20ページ、20cm x 20cmの麻製アルバム（パーソナライズされたページ付き）、麻製ボックス、パーソナライズされたUSBメモリが含まれます。 
+            </p>
+            <p>
+              <strong>
+                ¥ 83,500 （税込）
+              </strong>
+            </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="opener" onclick="toggleInfo('birthdayEternalize')">
+          <img class="toggle-button" src="../img/svg/open.svg" alt="arrow to open info">
+          <h5>Eternalize Plan</h5>
+        </div>
+          <div class="more-info" id="birthdayEternalize">
+            <p>
+              Birthday Photoshoot: 25 photos.
+              <br/><br/>
+              Delivery Method:Linen album with 25 personalized pages, 25cm x 25cm in size, including a linen box and a personalized flash drive. Wall art in Canva, 40x60cm.            
+            </p>
+            <p>
+              <strong>
+                ¥ 112,500 tax included.
+              </strong>
+            </p>
+            <p>
+              バースデー撮影プラン： 25枚のデータ              
+              <br/><br/>
+              納品内容： 25ページ、25cm x 25cmの麻製アルバム（パーソナライズされたページ付き）、麻製ボックス、パーソナライズされたUSBメモリが含まれます。 Canva製ウォールアート 40cm x 60cm。             </p>
+            <p>
+              <strong>
+                ¥ 112,500 （税込）
+              </strong>
+            </p>
+          </div>
+      </div>
+      <a class="blackButton" href="https://line.me/R/oaMessage/@607mlzul/?Hi%2C%20I%20came%20from%20the%20site%20and%20need%20more%20information.%0A%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%A6%E3%80%82%E3%81%93%E3%81%A1%E3%82%89%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%A9%B3%E3%81%97%E3%81%8F%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84%E3%81%A7%E3%81%99%E3%80%82">Get in Touch</a>
+    </div>
+  </div>
+  <div class="price-wrap">
+    <img src="../img/price/adulthood.svg" alt="">
+    <h4>成人式</h4>
+    <div class="itens">
+      <div class="item">
+        <div class="opener" onclick="toggleInfo('adulthoodMoment')">
+          <img class="toggle-button" src="../img/svg/open.svg" alt="arrow to open info">
+          <h5>Moment Plan</h5>
+        </div>
+        <div class="more-info" id="adulthoodMoment">
+          <p>
+            Photoshoot: 15 photos delivered on a flash drive.
+          </p>
+          <p>
+            <strong>
+              ¥ 52,500 tax included.
+            </strong>
+          </p>
+          <p>
+            撮影プラン： 15枚のデータ（USBメモリにて納品） 
+          </p>
+          <p>
+            <strong>
+              ¥ 52,500 （税込）
+            </strong>
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="opener" onclick="toggleInfo('adulthoodDream')">
+          <img class="toggle-button" src="../img/svg/open.svg" alt="arrow to open info">
+          <h5>Dream Plan</h5>
+        </div>
+        <div class="more-info" id="adulthoodDream">
+            <p>
+              Photoshoot: 20 photos.
+              <br/><br/>
+              Delivery Method: Linen album with 20 personalized pages, 20cm x 20cm in size, including a linen box and a personalized flash drive.            
+            </p>
+            <p>
+              <strong>
+                ¥ 88,500 tax included.
+              </strong>
+            </p>
+            <p>
+              撮影プラン： 20枚のデータ
+              <br/><br/>
+              納品内容： 20ページ、20cm x 20cmの麻製アルバム（パーソナライズされたページ付き）、麻製ボックス、パーソナライズされたUSBメモリが含まれます。 
+            </p>
+            <p>
+              <strong>
+                ¥ 88,500 （税込）
+              </strong>
+            </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="opener" onclick="toggleInfo('adulthoodEternalize')">
+          <img class="toggle-button" src="../img/svg/open.svg" alt="arrow to open info">
+          <h5>Eternalize Plan</h5>
+        </div>
+          <div class="more-info" id="adulthoodEternalize">
+            <p>
+              Photoshoot: 25 photos.
+              <br/><br/>
+              Delivery Method:Linen album with 25 personalized pages, 25cm x 25cm in size, including a linen box and a personalized flash drive. Wall art in Canva, 40x60cm.            
+            </p>
+            <p>
+              <strong>
+                ¥ 120,500 tax included.
+              </strong>
+            </p>
+            <p>
+              撮影プラン： 25枚のデータ              
+              <br/><br/>
+              納品内容： 25ページ、25cm x 25cmの麻製アルバム（パーソナライズされたページ付き）、麻製ボックス、パーソナライズされたUSBメモリが含まれます。 Canva製ウォールアート 40cm x 60cm。             </p>
+            <p>
+              <strong>
+                ¥ 120,500 （税込）
+              </strong>
+            </p>
+          </div>
+      </div>
+      <a class="blackButton" href="https://line.me/R/oaMessage/@607mlzul/?Hi%2C%20I%20came%20from%20the%20site%20and%20need%20more%20information.%0A%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%A6%E3%80%82%E3%81%93%E3%81%A1%E3%82%89%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%A9%B3%E3%81%97%E3%81%8F%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84%E3%81%A7%E3%81%99%E3%80%82">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+
+{% include 'footer.njk' %}
+
+
+ <!-- script para abrir os preços -->
+<script>
+  function toggleInfo(id) {
+    const infoDiv = document.getElementById(id);
+    const button = infoDiv.previousElementSibling.firstElementChild;
+    if (infoDiv.style.display === "none" || infoDiv.style.display === "") {
+      infoDiv.style.display = "block";
+      button.src = "../img/svg/close.svg";
+    } else {
+      infoDiv.style.display = "none";
+      button.src = "../img/svg/open.svg";
+    }
+    console.log(button)
+  }
+  function reset() {
+    const info = document.getElementsByClassName("more-info");
+    const button = document.getElementsByClassName("toggle-button");
+    for (let i = 0; i < info.length; i++) {
+      info[i].style.display = "none";
+      button[i].src = "../img/svg/open.svg";
+    }
+  }
+</script>
+
+ <!-- script para o menu que abre do mobile -->
+<script>
+    const checkbox = document.querySelector('.menu-btn');
+    const menu = document.querySelector('.menu');
+  
+  checkbox.addEventListener('change', () => {
+    if (checkbox.checked) {
+      // Abrir o menu suavemente
+      menu.classList.add('open');
+      const fullHeight = window.innerHeight + 'px';
+      menu.style.maxHeight = fullHeight;
+    } else {
+      // Fechar o menu suavemente
+      menu.style.maxHeight = menu.scrollHeight + 'px';
+      requestAnimationFrame(() => {
+        menu.style.maxHeight = '0';
+      });
+      menu.addEventListener('transitionend', () => {
+        menu.classList.remove('open');
+      }, { once: true });
+    }
+  });
+  </script>

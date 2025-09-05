@@ -1,0 +1,244 @@
+---
+title: Studio Orita
+layout: "base.njk"
+cssPath: "/css/pages.css"
+---
+<section class="header3 header-animation">
+  <nav class="nav2" id="navbar">
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <a href="/">
+        <img class="only-mobile" src="../img/logo-header.png" alt="">
+      </a>    
+    <li> 
+        <a href="/">
+          <h3>Home</h3>
+          <p>ホーム</p>
+        </a>
+      </li>
+      <li>
+        <a href="/gallery">
+          <h3>Gallery</h3>
+          <p>ギャラリー</p>
+        </a>
+      </li>
+      <li>
+        <a class="selected">
+          <h3>Selected Works</h3>
+          <p>作品集</p>
+        </a>
+      </li>
+      <li>
+        <a href="/about">
+          <h3>About</h3>
+          <p>私について</p>
+        </a>
+      </li>
+      <li>
+        <a href="/price">
+          <h3>Price</h3>
+          <p>撮影プラン</p>
+        </a>
+      </li>
+      <li>
+        <a href="/contact">
+          <h3>Contact</h3>
+          <p>お問い合わせ</p>
+        </a>
+      </li>
+      <div class="icons only-mobile">
+        <a href="https://www.instagram.com/felipeorita/">
+          <img src="../img/svg/instagram.svg" alt="">
+        </a>
+        <a href="https://line.me/R/oaMessage/@607mlzul/?Hi%2C%20I%20came%20from%20the%20site%20and%20need%20more%20information.%0A%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%A6%E3%80%82%E3%81%93%E3%81%A1%E3%82%89%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%A9%B3%E3%81%97%E3%81%8F%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84%E3%81%A7%E3%81%99%E3%80%82">
+          <img src="../img/svg/line.svg" alt="">
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=818094043450&text=Hi%2C%20I%20came%20from%20the%20site%20and%20need%20more%20information.%0A%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%A6%E3%80%82%E3%81%93%E3%81%A1%E3%82%89%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%A9%B3%E3%81%97%E3%81%8F%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84%E3%81%A7%E3%81%99%E3%80%82">
+          <img src="../img/svg/whatsapp.svg" alt="">
+        </a>
+      </div>
+  
+      <label class="menu-icon-inside only-mobile" for="menu-btn">
+        <span class="navicon"></span
+      ></label>
+    </ul>
+  </nav>
+  <img class="background only-desktop" src="../img/works-header.png" alt="">
+  <img class="background mobile-tablet" src="../img/works-header-mob.png" alt="">
+  <img class="logo-header" src="../img/logo-header.png" alt="">
+ 
+</section>
+
+<section class="works">
+    <h1>Selected Works</h1>
+    <div class="selector-works">
+      <div class="works-item chosed" id="newborn">
+        <p>NEWBORN</p>
+        <h3>ニューボーン</h3>
+      </div>
+      <div class="works-item" id="family">
+        <p>FAMILY</p>
+        <h3>ファミリ</h3>
+      </div>
+      <div class="works-item" id="kids">
+        <p>KIDS</p>
+        <h3>キッズ</h3>
+      </div>
+      <div class="works-item" id="maternity">
+        <p>MATERNITY</p>
+        <h3>マタニティ</h3>
+      </div>
+      <div class="works-item" id="age">
+        <p>Coming of Age Day</p>
+        <h3>成人式</h3>
+      </div>
+    </div>
+  <div class="works-images" id="works-images">
+    <img data-aos="zoom-in-up" class="works-img2" src="../img/works/newborn2.png" alt="">
+    <img data-aos="zoom-in-up" class="works-img1" src="../img/works/newborn1.png" alt="">
+    <img data-aos="zoom-in-up" class="works-img3" src="../img/works/newborn3.png" alt="">
+    <img data-aos="zoom-in-up" class="works-img4" src="../img/works/newborn4.png" alt="">
+    <img data-aos="zoom-in-up" class="works-img5 only-desktop" src="../img/works/newborn5.png" alt="">
+    <img data-aos="zoom-in-up" class="works-img5 only-mobile" src="../img/works/newborn5.png" alt="">
+  </div>
+</section>
+
+{% include 'footer.njk' %}
+
+
+<!-- Script para troca de fotos -->
+
+<script>
+  let chosed = "newborn";
+  const section = document.getElementById("works-images");
+
+  function resetSelection() {
+    newborn.classList.remove("chosed");
+    family.classList.remove("chosed");
+    kids.classList.remove("chosed");
+    maternity.classList.remove("chosed");
+    age.classList.remove("chosed");
+  }
+
+  const newborn = document.getElementById("newborn");
+  newborn.addEventListener("click", () => {
+    resetSelection();
+    chosed = "newborn photos";
+    newborn.classList.add("chosed");
+    updateSection();
+  });
+  const family = document.getElementById("family");
+  family.addEventListener("click", () => {
+    resetSelection();
+    chosed = "family photos";
+    family.classList.add("chosed");
+    updateSection();
+  });
+  const kids = document.getElementById("kids");
+  kids.addEventListener("click", () => {
+    resetSelection();
+    chosed = "kids photos";
+    kids.classList.add("chosed");
+    updateSection();
+  });
+  const maternity = document.getElementById("maternity");
+  maternity.addEventListener("click", () => {
+    resetSelection();
+    chosed = "maternity photos";
+    maternity.classList.add("chosed");
+    updateSection();
+  });
+  const age = document.getElementById("age");
+  age.addEventListener("click", () => {
+    resetSelection();
+    chosed = "age photos";
+    age.classList.add("chosed");
+    updateSection();
+  });
+
+  function updateSection() {
+    if (chosed === "newborn photos") {
+      section.innerHTML = `
+      <img data-aos"zoom-in-up" class="works-img2" src="../img/works/newborn2.png" alt="">
+        <img data-aos"zoom-in-up" class="works-img1" src="../img/works/newborn1.png" alt="">
+        <img data-aos"zoom-in-up" class="works-img3" src="../img/works/newborn3.png" alt="">
+        <img data-aos"zoom-in-up" class="works-img4" src="../img/works/newborn4.png" alt="">
+        <img data-aos"zoom-in-up" class="works-img5" src="../img/works/newborn5.png" alt="">
+            `;
+    } else if (chosed === "family photos") {
+      section.innerHTML = `
+      <img data-aos="zoom-in-up" class="works-img2" src="../img/works/family2.png" alt="">
+          <img data-aos="zoom-in-up" class="works-img1" src="../img/works/family1.png" alt="">
+          <img data-aos="zoom-in-up" class="works-img3" src="../img/works/family3.png" alt="">
+          <img data-aos="zoom-in-up" class="works-img4" src="../img/works/family4.png" alt="">
+          <img data-aos="zoom-in-up" class="works-img5" src="../img/works/family5.png" alt="">
+            `;
+    } else if (chosed == "kids photos") {
+      section.innerHTML = `
+      <img data-aos="zoom-in-up" class="works-img2" src="../img/works/kids2.png" alt="">
+          <img data-aos="zoom-in-up" class="works-img1" src="../img/works/kids1.png" alt="">
+          <img data-aos="zoom-in-up" class="works-img3" src="../img/works/kids3.png" alt="">
+          <img data-aos="zoom-in-up" class="works-img4" src="../img/works/kids4.png" alt="">
+          <img data-aos="zoom-in-up" class="works-img5" src="../img/works/kids5.png" alt="">
+        `;
+    } else if (chosed == "maternity photos") {
+      section.innerHTML = `
+      <img data-aos="zoom-in-up" class="works-img2" src="../img/works/maternity2.png" alt="">
+          <img data-aos="zoom-in-up" class="works-img1" src="../img/works/maternity1.png" alt="">
+          <img data-aos="zoom-in-up" class="works-img3" src="../img/works/maternity3.png" alt="">
+          <img data-aos="zoom-in-up" class="works-img4" src="../img/works/maternity4.png" alt="">
+          <img data-aos="zoom-in-up" class="works-img5" src="../img/works/maternity5.png" alt="">
+        `;
+    } else if (chosed == "age photos") {
+      section.innerHTML = `
+      <img data-aos="zoom-in-up" class="works-img2" src="../img/works/age2.png" alt="">
+          <img data-aos="zoom-in-up" class="works-img1" src="../img/works/age1.png" alt="">
+          <img data-aos="zoom-in-up" class="works-img3" src="../img/works/age3.png" alt="">
+          <img data-aos="zoom-in-up" class="works-img4" src="../img/works/age4.png" alt="">
+          <img data-aos="zoom-in-up" class="works-img5" src="../img/works/age5.png" alt="">
+        `;
+    };
+  }
+</script>
+
+<!-- script para manipular o nav fixo -->
+  <!-- <script>
+    const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+  const viewHeight = window.innerHeight * 0.78
+  if (window.scrollY > viewHeight) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+  console.log(viewHeight)
+});
+  </script>
+
+  -->
+
+  <!-- script para o menu que abre do mobile -->
+<script>
+    const checkbox = document.querySelector('.menu-btn');
+    const menu = document.querySelector('.menu');
+  
+  checkbox.addEventListener('change', () => {
+    if (checkbox.checked) {
+      // Abrir o menu suavemente
+      menu.classList.add('open');
+      const fullHeight = window.innerHeight + 'px';
+      menu.style.maxHeight = fullHeight;
+    } else {
+      // Fechar o menu suavemente
+      menu.style.maxHeight = menu.scrollHeight + 'px';
+      requestAnimationFrame(() => {
+        menu.style.maxHeight = '0';
+      });
+      menu.addEventListener('transitionend', () => {
+        menu.classList.remove('open');
+      }, { once: true });
+    }
+  });
+  </script>

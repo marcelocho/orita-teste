@@ -1,0 +1,116 @@
+@use "./colors" as *;
+
+$mundial: mundial, sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  background-color: $background;
+}
+
+a, p, h1, h2, h3, h4, h5, h6, span, li, label, button, input {
+  text-decoration: none;
+  color: $preto;
+  font-family: $mundial;
+}
+::placeholder{
+  font-family: $mundial;
+}
+li {
+  list-style: none;
+}
+
+.only-mobile {
+  display: none !important;
+}
+.mobile-tablet{
+  display: none !important;
+}
+.only-tablet{
+  display: none !important;
+}
+@media screen and (max-width: 700px) {
+  .only-mobile {
+    display: inline-block !important;
+  }
+  .mobile-tablet{
+    display: inline-block !important;
+  }
+  .tablet-desktop{
+    display: none !important;
+  }
+  .only-desktop {
+    display: none !important;
+  }
+  .only-tablet{
+    display: none !important;
+  }
+  h1{
+    font-size: 3rem;
+    line-height: 2.2rem;
+  }
+}
+@media screen and (min-width:701px) and (max-width:1260px){
+  .mobile-tablet{
+    display: inline-block !important;
+  }
+  .only-desktop{
+    display: none !important;
+  }
+  .only-tablet{
+    display: inline-block !important;
+  }
+}
+@media (orientation: landscape) and (max-height: 500px){
+  .only-desktop{
+    display: none !important;
+  }
+}
+.upper{
+  text-transform: uppercase;
+}
+
+@keyframes appear {
+  0% {
+      transform: translatex(10%);
+      opacity: 0;
+  }
+
+  100% {
+      transform: translatex(0);
+      opacity: 1;
+  }
+}
+
+.whatsapp {
+  position: fixed;
+  z-index: 900;
+  bottom: 3rem;
+  right: 8rem;
+  height: 8rem;
+
+  @media screen and (max-width: 700px) {
+    bottom: 2.5rem;
+  left: unset;
+  right: 2.5rem;
+  height: 6rem;
+  }
+  @media screen and (min-width: 701px) and (max-width:1260px) {
+    bottom: 3rem;
+  left: unset;
+  right: 5rem;
+  height: 7rem;
+  }
+}  

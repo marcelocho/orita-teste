@@ -1,0 +1,167 @@
+@use "./colors" as *;
+@use "./global" as *;
+
+.price{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    gap: 3.5rem;
+    padding-bottom: 9rem;
+    h3{
+        font-size: 2rem;
+        line-height: 2rem;
+        font-weight: 400;
+    }
+    h2{
+        font-size: 4rem;
+        line-height: 5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 5%;
+        margin-bottom: 13rem;
+        width: 60rem;
+        text-align: center;
+    }
+    .price-wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: 4rem auto;
+        position: relative;
+        background-color: $background2;
+        padding: 4rem 5% 8rem;
+        >img{
+            position: absolute;
+            left: 5%;
+            top: -4.5rem;
+        }
+        h4{
+            font-size: 2.2rem;
+            line-height: 100%;
+            font-weight: 300;
+            margin-bottom: 7rem;
+        }
+        .itens{
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            width: 100%;
+            margin: auto;
+            .item{
+                .opener{
+                    display: flex;
+                    align-items: center;
+                    gap: 2rem;
+                    padding-bottom: 1.5rem;
+                    border-bottom: 1px solid $preto;
+                    cursor: pointer;
+                }
+                h5{
+                    font-size: 2.6rem;
+                    line-height: 2.6rem;
+                    font-weight: 400;
+                    font-style: italic;
+                }
+                .more-info{
+                    padding: 0 0 7rem;
+                    display: none;
+                    p{
+                        font-size: 2rem;
+                        line-height: 2.6rem;
+                        font-weight: 300;
+                        margin-top: 3.5rem;
+                        width: 70%;
+                    }
+                    strong{
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    .back3{
+        background-color: $background3;
+    }
+    @media screen and (max-width:700px){
+        gap: 1.5rem;
+        padding-bottom: 8rem;
+        h3{
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+        }
+        h2{
+            font-size: 2rem;
+            line-height: 2.6rem;
+            margin-bottom: 7rem;
+            width: 100%;
+        }
+        .price-wrap{
+            margin: 4rem auto;
+            padding: 2rem 5% 8rem;
+            >img{
+                position: absolute;
+                left: 5%;
+                top: -2.1rem;
+                width: auto;
+                height: 3.4rem;
+            }
+            .maternity{
+                top: -1.7rem;
+                height: 4rem;
+                width: auto;
+            }
+            .family{
+                top: -1.7rem;
+                height: 4rem;
+                width: auto;
+            }
+            .birthday{
+                top: -1.7rem;
+                height: 4rem;
+                width: auto;
+            }
+            h4{
+                font-size: 1.5rem;
+                margin-bottom: 6rem;
+            }
+            .itens{
+                gap: 2rem;
+                .item{
+                    .opener{
+                        display: flex;
+                        align-items: center;
+                        gap: 0.6rem;
+                        padding-bottom: 1rem;
+                        border-bottom: 1px solid $preto;
+                        cursor: pointer;
+                        img{
+                            width: 1.2rem;
+                        }
+                    }
+                    h5{
+                        font-size: 1.8rem;
+                        line-height: 100%;
+                        padding-bottom: 0.3rem;
+                    }
+                    .more-info{
+                        padding: 0 0 3rem;
+                        display: none;
+                        p{
+                            font-size: 1.4rem;
+                            line-height: 2rem;
+                            margin-top: 2.5rem;
+                            width: 70%;
+                        }
+                        strong{
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

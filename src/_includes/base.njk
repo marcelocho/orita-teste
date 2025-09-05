@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Studio Orita - Felipe Orita" />
+
+    <link rel="stylesheet" href="{{ cssPath }}" />
+    <link rel="icon" href="../img/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/zmq3ntu.css">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script> 
+
+    <meta name="google-site-verification" content="Ok6PZ1v9m1r_-9oG7I1RdbQNAExj-P0X9iCRgnTUHDE" />
+
+    <title>{{ title }}</title>
+
+  </head>
+
+  <body>
+
+    <main>
+      {{ content | safe }}
+    </main>
+
+  </body>
+
+  <script>
+    AOS.init({
+      duration: 1500,
+    });
+
+    const header = document.getElementsByClassName(".header-animation");
+  let animation = gsap.timeline(header);
+  function animations() {
+    animation
+      .from(
+        ".header-animation .logo-header",
+        { duration: 1, x: -100, duration: 1.5, opacity: 0 },
+      );
+  }
+
+  animations();
+  </script>
+</html>
+
+
