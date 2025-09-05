@@ -1,26 +1,24 @@
-import fetch from "node-fetch";
+// /api/auth.js
 
-export default async function handler(req, res) {
-  const { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } = process.env;
+const { createVercelBeginHandler, createVercelCompleteHandler } = require('decap-server');
 
-  if (req.url.startsWith("/api/auth/callback")) {
-    const code = req.query.code;
+// O handler "begin" redireciona o usuário para a página de autorização do GitHub
+const beginAuth = createVercelBeginHandler({
+  // Use as mesmas credenciais do seu GitHub OAuth App
+  oauthClientID: process.env.OAUTH_CLIENT_ID,
+  oauthClientSecret: process.env.OAUTH_CLIENT_SECRET,
+});
 
-    const response = await fetch(`https://github.com/login/oauth/access_token`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify({
-        client_id: GITHUB_CLIENT_ID,
-        client_secret: GITHUB_CLIENT_SECRET,
-        code,
-      }),
-    });
+// O handler "complete" é chamado pelo GitHub após a autorização
+// Ele troca o código recebido por um token de acesso
+const completeAuth = createVercelCompleteHandler();
 
-    const data = await response.json();
-    res.status(200).json(data);
-  } else {
-    res.redirect(
-      `https://github.com/login/oauth/authorize?client_id=${GITHUB_CLIENT_ID}&scope=repo,user`
-    );
+// Exporta um handler principal que decide qual função chamar
+module.exports = (req, res) => {
+  // Verifica se a URL contém 'callback', o que indica que é a fase 'complete'
+  if (req.url.includes('callback')) {
+    return completeAuth(req, res);
   }
-}
+  // Caso contrário, inicia o processo de autenticação
+  return beginAuth(req, res);
+};
