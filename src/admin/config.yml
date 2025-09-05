@@ -1,12 +1,12 @@
 backend:
   name: github
-  repo: marcelocho/orita-teste   # troque pelo seu
+  repo: marcelocho/orita-teste  # troque pelo seu repositório GitHub
   branch: main
-  base_url: https://orita-teste.vercel.app/   # sua URL hospedada na Vercel
+  base_url: https://orita-teste.vercel.app
   auth_endpoint: /api/auth
 
-media_folder: "public/uploads"
-public_folder: "/uploads"
+media_folder: "public/uploads" # onde os arquivos serão salvos no repo
+public_folder: "/uploads"      # caminho público dos arquivos no site
 
 collections:
   - name: "posts"
