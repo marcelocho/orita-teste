@@ -1,5 +1,5 @@
 ---
-kidsMoment: 37,500
+kidsMoment: 900,500
 kidsDream: 83,500
 kidsEternalize: 112,500
 maternityMoment: 37,500
