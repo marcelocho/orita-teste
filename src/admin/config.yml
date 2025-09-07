@@ -2,10 +2,8 @@ backend:
   name: github
   repo: marcelocho/orita-teste
   branch: main
-media_folder: "public/img/blog"
+media_folder: "img/blog"
 public_folder: "/img/blog"
-media_library:
-  name: git
 collections:
   - name: "config"
     label: "Site price Informations"
