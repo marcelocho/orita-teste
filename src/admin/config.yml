@@ -5,11 +5,11 @@ media_folder: "public/img/blog"
 public_folder: "/img/blog"
 collections:
   - name: "config"
-    label: "Site price configurations"
+    label: "Site price Informations"
     files:
-      - file: "src/config/description.md"
-        label: "Description texts"
-        name: "description"
+      - file: "src/config/price.md"
+        label: "Price Informations"
+        name: "price"
         fields:
           - { label: "Kids Plan-Moment", name: "kidsMoment", widget: "string" }
           - { label: "Kids Plan-Dream", name: "kidsDream", widget: "string" }
