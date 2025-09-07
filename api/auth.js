@@ -1,24 +1,19 @@
 // /api/auth.js
 
-const { createVercelBeginHandler, createVercelCompleteHandler } = require('decap-server');
+const { createVercelHandler } = require('decap-server');
 
-// O handler "begin" redireciona o usuário para a página de autorização do GitHub
-const beginAuth = createVercelBeginHandler({
-  // Use as mesmas credenciais do seu GitHub OAuth App
+// A nova API usa uma única função para criar o handler completo
+// A própria função detecta se é o início do fluxo ou o callback.
+const handler = createVercelHandler({
+  // Use as mesmas credenciais do seu GitHub OAuth App que estão nas variáveis de ambiente da Vercel
   oauthClientID: process.env.OAUTH_CLIENT_ID,
   oauthClientSecret: process.env.OAUTH_CLIENT_SECRET,
+
+  // Escopos opcionais que você pode solicitar ao GitHub
+  // 'repo' é comum para permitir que o CMS escreva no repositório
+  // 'user' para ler a identidade do usuário
+  oauthScopes: ['repo', 'user'],
 });
 
-// O handler "complete" é chamado pelo GitHub após a autorização
-// Ele troca o código recebido por um token de acesso
-const completeAuth = createVercelCompleteHandler();
-
-// Exporta um handler principal que decide qual função chamar
-module.exports = (req, res) => {
-  // Verifica se a URL contém 'callback', o que indica que é a fase 'complete'
-  if (req.url.includes('callback')) {
-    return completeAuth(req, res);
-  }
-  // Caso contrário, inicia o processo de autenticação
-  return beginAuth(req, res);
-};
+// Exporta o handler para ser usado pela Vercel
+module.exports = handler;
