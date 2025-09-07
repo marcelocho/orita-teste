@@ -1,8 +1,13 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: marcelocho/felipe-orita
   branch: main
+  base_url: https://orita-teste.vercel.app
+  auth_endpoint: /api/auth
 media_folder: "public/img/blog"
 public_folder: "/img/blog"
+media_library:
+  name: git
 collections:
   - name: "config"
     label: "Site price Informations"
