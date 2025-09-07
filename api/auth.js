@@ -29,6 +29,6 @@ export default async function handler(req, res) {
 
   // Se não for callback, inicia o login redirecionando pro GitHub
   return res.redirect(
-    `https://github.com/login/oauth/authorize?client_id=${GITHUB_CLIENT_ID}&scope=repo,user`
+    `https://github.com/login/oauth/authorize?client_id=${Ov23li9p44edhvZzgILc}&scope=repo,user`
   );
 }
