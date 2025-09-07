@@ -67,6 +67,8 @@ cssPath: "/css/pages.css"
  
 </section>
 
+{% set priceData = collections.price[0].data %}
+
 <section class="price">
   <h3>思い出への投資：撮影プラン</h3>
   <h2>Investment in Memories: Our Photography Plans.</h2>
@@ -86,7 +88,7 @@ cssPath: "/css/pages.css"
           </p>
           <p>
             <strong>
-              ¥ 37,500 tax included.
+              ¥ {{ priceData.kidsMoment }} tax included.
             </strong>
           </p>
           <p>
@@ -94,7 +96,7 @@ cssPath: "/css/pages.css"
           </p>
           <p>
             <strong>
-              ¥ 37,500 （税込）
+              ¥ {{ priceData.kidsMoment }} （税込）
             </strong>
           </p>
         </div>
@@ -112,7 +114,7 @@ cssPath: "/css/pages.css"
             </p>
             <p>
               <strong>
-                ¥ 83,500 tax included.
+                ¥ {{ priceData.kidsDream }} tax included.
               </strong>
             </p>
             <p>
@@ -122,7 +124,7 @@ cssPath: "/css/pages.css"
             </p>
             <p>
               <strong>
-                ¥ 83,500 （税込）
+                ¥ {{ priceData.kidsDream }} （税込）
               </strong>
             </p>
         </div>
@@ -140,7 +142,7 @@ cssPath: "/css/pages.css"
             </p>
             <p>
               <strong>
-                ¥ 112,500 tax included.
+                ¥ {{ priceData.kidsEternalize }} tax included.
               </strong>
             </p>
             <p>
@@ -149,7 +151,7 @@ cssPath: "/css/pages.css"
               納品内容： 25ページ、25cm x 25cmの麻製アルバム（パーソナライズされたページ付き）、麻製ボックス、パーソナライズされたUSBメモリが含まれます。 Canva製ウォールアート 40cm x 60cm。             </p>
             <p>
               <strong>
-                ¥ 112,500 （税込）
+                ¥ {{ priceData.kidsEternalize }} （税込）
               </strong>
             </p>
           </div>
@@ -172,7 +174,7 @@ cssPath: "/css/pages.css"
           </p>
           <p>
             <strong>
-              ¥ 37,500 tax included.
+              ¥ {{ priceData.maternityMoment }} tax included.
             </strong>
           </p>
           <p>
@@ -180,7 +182,7 @@ cssPath: "/css/pages.css"
           </p>
           <p>
             <strong>
-              ¥ 37,500 （税込）
+              ¥ {{ priceData.maternityMoment }} （税込）
             </strong>
           </p>
         </div>
@@ -198,7 +200,7 @@ cssPath: "/css/pages.css"
             </p>
             <p>
               <strong>
-                ¥ 83,500 tax included.
+                ¥ {{ priceData.maternityDream }} tax included.
               </strong>
             </p>
             <p>
@@ -208,7 +210,7 @@ cssPath: "/css/pages.css"
             </p>
             <p>
               <strong>
-                ¥ 83,500 （税込）
+                ¥ {{ priceData.maternityDream }} （税込）
               </strong>
             </p>
         </div>
@@ -226,7 +228,7 @@ cssPath: "/css/pages.css"
             </p>
             <p>
               <strong>
-                ¥ 112,500 tax included.
+                ¥ {{ priceData.maternitySweet }} tax included.
               </strong>
             </p>
             <p>
@@ -235,7 +237,7 @@ cssPath: "/css/pages.css"
               納品内容： 25ページ、25cm x 25cmの麻製アルバム（パーソナライズされたページ付き）、麻製ボックス、パーソナライズされたUSBメモリが含まれます。 Canva製ウォールアート 40cm x 60cm。             </p>
             <p>
               <strong>
-                ¥ 112,500 （税込）
+                ¥ {{ priceData.maternitySweet }} （税込）
               </strong>
             </p>
           </div>
@@ -258,7 +260,7 @@ cssPath: "/css/pages.css"
           </p>
           <p>
             <strong>
-              ¥ 47,500 tax included.
+              ¥ {{ priceData.familyMoment }} tax included.
             </strong>
           </p>
           <p>
@@ -266,7 +268,7 @@ cssPath: "/css/pages.css"
           </p>
           <p>
             <strong>
-              ¥ 47,500 （税込）
+              ¥ {{ priceData.familyMoment }} （税込）
             </strong>
           </p>
         </div>
@@ -284,7 +286,7 @@ cssPath: "/css/pages.css"
             </p>
             <p>
               <strong>
-                ¥ 83,500 tax included.
+                ¥ {{ priceData.familyDream }} tax included.
               </strong>
             </p>
             <p>
@@ -294,7 +296,7 @@ cssPath: "/css/pages.css"
             </p>
             <p>
               <strong>
-                ¥ 83,500 （税込）
+                ¥ {{ priceData.familyDream }} （税込）
               </strong>
             </p>
         </div>
@@ -312,7 +314,7 @@ cssPath: "/css/pages.css"
             </p>
             <p>
               <strong>
-                ¥ 112,500 tax included.
+                ¥ {{ priceData.familyTales }} tax included.
               </strong>
             </p>
             <p>
@@ -321,7 +323,7 @@ cssPath: "/css/pages.css"
               納品内容： 25ページ、25cm x 25cmの麻製アルバム（パーソナライズされたページ付き）、麻製ボックス、パーソナライズされたUSBメモリが含まれます。 Canva製ウォールアート 40cm x 60cm。             </p>
             <p>
               <strong>
-                ¥ 112,500 （税込）
+                ¥ {{ priceData.familyTales }} （税込）
               </strong>
             </p>
           </div>
@@ -344,7 +346,7 @@ cssPath: "/css/pages.css"
           </p>
           <p>
             <strong>
-              ¥ 37,500 tax included.
+              ¥ {{ priceData.birthdayMoment }} tax included.
             </strong>
           </p>
           <p>
@@ -352,7 +354,7 @@ cssPath: "/css/pages.css"
           </p>
           <p>
             <strong>
-              ¥ 37,500 （税込）
+              ¥ {{ priceData.birthdayMoment }} （税込）
             </strong>
           </p>
         </div>
@@ -370,7 +372,7 @@ cssPath: "/css/pages.css"
             </p>
             <p>
               <strong>
-                ¥ 83,500 tax included.
+                ¥ {{ priceData.birthdayDream }} tax included.
               </strong>
             </p>
             <p>
@@ -380,7 +382,7 @@ cssPath: "/css/pages.css"
             </p>
             <p>
               <strong>
-                ¥ 83,500 （税込）
+                ¥ {{ priceData.birthdayDream }} （税込）
               </strong>
             </p>
         </div>
@@ -398,7 +400,7 @@ cssPath: "/css/pages.css"
             </p>
             <p>
               <strong>
-                ¥ 112,500 tax included.
+                ¥ {{ priceData.birthdayEternalize }} tax included.
               </strong>
             </p>
             <p>
@@ -407,7 +409,7 @@ cssPath: "/css/pages.css"
               納品内容： 25ページ、25cm x 25cmの麻製アルバム（パーソナライズされたページ付き）、麻製ボックス、パーソナライズされたUSBメモリが含まれます。 Canva製ウォールアート 40cm x 60cm。             </p>
             <p>
               <strong>
-                ¥ 112,500 （税込）
+                ¥ {{ priceData.birthdayEternalize }} （税込）
               </strong>
             </p>
           </div>
@@ -430,7 +432,7 @@ cssPath: "/css/pages.css"
           </p>
           <p>
             <strong>
-              ¥ 52,500 tax included.
+              ¥ {{ priceData.adulthoodMoment }} tax included.
             </strong>
           </p>
           <p>
@@ -438,7 +440,7 @@ cssPath: "/css/pages.css"
           </p>
           <p>
             <strong>
-              ¥ 52,500 （税込）
+              ¥ {{ priceData.adulthoodMoment }} （税込）
             </strong>
           </p>
         </div>
@@ -456,7 +458,7 @@ cssPath: "/css/pages.css"
             </p>
             <p>
               <strong>
-                ¥ 88,500 tax included.
+                ¥ {{ priceData.adulthoodDream }} tax included.
               </strong>
             </p>
             <p>
@@ -466,7 +468,7 @@ cssPath: "/css/pages.css"
             </p>
             <p>
               <strong>
-                ¥ 88,500 （税込）
+                ¥ {{ priceData.adulthoodDream }} （税込）
               </strong>
             </p>
         </div>
@@ -484,7 +486,7 @@ cssPath: "/css/pages.css"
             </p>
             <p>
               <strong>
-                ¥ 120,500 tax included.
+                ¥ {{ priceData.adulthoodEternalize }} tax included.
               </strong>
             </p>
             <p>
@@ -493,7 +495,7 @@ cssPath: "/css/pages.css"
               納品内容： 25ページ、25cm x 25cmの麻製アルバム（パーソナライズされたページ付き）、麻製ボックス、パーソナライズされたUSBメモリが含まれます。 Canva製ウォールアート 40cm x 60cm。             </p>
             <p>
               <strong>
-                ¥ 120,500 （税込）
+                ¥ {{ priceData.adulthoodEternalize }} （税込）
               </strong>
             </p>
           </div>

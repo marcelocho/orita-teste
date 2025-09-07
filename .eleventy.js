@@ -5,8 +5,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/sitemap.xml");
   eleventyConfig.addPassthroughCopy("./src/admin");
 
-  eleventyConfig.addCollection("geral", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/config/description.md");
+  eleventyConfig.addCollection("price", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/config/price.md");
   });
 
   return {
