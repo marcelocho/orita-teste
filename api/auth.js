@@ -1,19 +1,26 @@
-// /api/auth.js
+import fetch from "node-fetch";
 
-const { createVercelHandler } = require('decap-server');
+export default async function handler(req, res) {
+  const { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } = process.env;
 
-// A nova API usa uma única função para criar o handler completo
-// A própria função detecta se é o início do fluxo ou o callback.
-const handler = createVercelHandler({
-  // Use as mesmas credenciais do seu GitHub OAuth App que estão nas variáveis de ambiente da Vercel
-  oauthClientID: process.env.OAUTH_CLIENT_ID,
-  oauthClientSecret: process.env.OAUTH_CLIENT_SECRET,
+  if (req.url.startsWith("/api/auth/callback")) {
+    const code = req.query.code;
 
-  // Escopos opcionais que você pode solicitar ao GitHub
-  // 'repo' é comum para permitir que o CMS escreva no repositório
-  // 'user' para ler a identidade do usuário
-  oauthScopes: ['repo', 'user'],
-});
+    const response = await fetch(`https://github.com/login/oauth/access_token`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        client_id: GITHUB_CLIENT_ID,
+        client_secret: GITHUB_CLIENT_SECRET,
+        code,
+      }),
+    });
 
-// Exporta o handler para ser usado pela Vercel
-module.exports = handler;
+    const data = await response.json();
+    res.status(200).json(data);
+  } else {
+    res.redirect(
+      `https://github.com/login/oauth/authorize?client_id=${GITHUB_CLIENT_ID}&scope=repo,user`
+    );
+  }
+}
