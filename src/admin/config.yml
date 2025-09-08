@@ -3,16 +3,30 @@ backend:
   repo: marcelocho/orita-teste
   branch: main
   base_url: https://orita-teste.vercel.app
-  auth_endpoint: /api/auth
-  auth_scope: "repo" # Corrigido como fizemos antes
-
-media_folder: "public/uploads"
-public_folder: "/uploads"
-
+  auth_endpoint: api/auth
+media_folder: "img/blog"
+public_folder: "/img/blog"
 collections:
-  - name: "test"
-    label: "Post de Teste"
-    folder: "src/test"
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
+  - name: "config"
+    label: "Site price Informations"
+    files:
+      - file: "src/config/price.md"
+        label: "Price Informations"
+        name: "price"
+        fields:
+          - { label: "Kids Plan-Moment", name: "kidsMoment", widget: "string" }
+          - { label: "Kids Plan-Dream", name: "kidsDream", widget: "string" }
+          - { label: "Kids Plan-Eternalize", name: "kidsEternalize", widget: "string" }
+          - { label: "Maternity-Moment", name: "maternityMoment", widget: "string" }
+          - { label: "Maternity-Dream", name: "maternityDream", widget: "string" }
+          - { label: "Maternity-Sweet", name: "maternitySweet", widget: "string" }
+          - { label: "Family-Moment", name: "familyMoment", widget: "string" }
+          - { label: "Family-Dream", name: "familyDream", widget: "string" }
+          - { label: "Family-Tales", name: "familyTales", widget: "string" }
+          - { label: "Birthday-Moment", name: "birthdayMoment", widget: "string" }
+          - { label: "Birthday-Dream", name: "birthdayDream", widget: "string" }
+          - { label: "Birthday-Eternalize", name: "birthdayEternalize", widget: "string" }
+          - { label: "Adulthood-Moment", name: "adulthoodMoment", widget: "string" }
+          - { label: "Adulthood-Dream", name: "adulthoodDream", widget: "string" }
+          - { label: "Adulthood-Eternalize", name: "adulthoodEternalize", widget: "string" }
+        
