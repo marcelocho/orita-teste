@@ -4,7 +4,7 @@ backend:
   branch: main
   base_url: https://orita-teste.vercel.app
   auth_endpoint: /api/auth
-  auth_scope: repo,user                     # Adicionar o escopo explicitamente é uma boa prática
+  auth_scope: "repo"                   # Adicionar o escopo explicitamente é uma boa prática
 media_folder: "img/blog"
 public_folder: "/img/blog"
 collections:
